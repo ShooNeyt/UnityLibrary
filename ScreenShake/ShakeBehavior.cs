@@ -29,7 +29,7 @@ public class ShakeBehavior : MonoBehaviour
     // Variable to define the base magnitude when the is triggered without informations.
     float _maxShakeMagnitude;
 
-    // Encapsulation of the variable _maxShakeDuration
+    /// <inheritdoc cref="_maxShakeDuration"/>
     public float ShakeDuration
     {
         get { return _maxShakeDuration; }
@@ -40,7 +40,7 @@ public class ShakeBehavior : MonoBehaviour
         }
     }
 
-    // Encapsulation of the variable _maxShakeMagnitude
+    /// <inheritdoc cref="_maxShakeMagnitude"/>
     public float ShakeMagnitude
     {
         get { return _maxShakeMagnitude; }
@@ -51,7 +51,9 @@ public class ShakeBehavior : MonoBehaviour
         }
     }
 
-    // Initial position of the transform triggered. Is set in the Awake() function of the script
+    /// <summary>
+    /// Initial position of the transform triggered. Is set in the Awake() function of the script
+    /// </summary>
     Vector3 _initialPosition;
 
     private void Awake()
@@ -95,16 +97,18 @@ public class ShakeBehavior : MonoBehaviour
         }
     }
 
-    // Résumé : 
-    //      Trigger a shake with variables set in the Inspector
+    /// <summary>
+    /// Trigger a shake with variables set in the Inspector
+    /// </summary>
     public void TriggerShake()
     {
         _shakeDuration = _maxShakeDuration;
         _shakeMagnitude = _maxShakeMagnitude;
     }
 
-    // Résumé :
-    //      Trigger a shake that gets slower by time with variables set in the Inspector
+    /// <summary>
+    /// Trigger a shake that gets slower by time with variables set in the Inspector
+    /// </summary>
     public void TriggerShakeToSlow()
     {
         _shakeDuration = _maxShakeDuration;
