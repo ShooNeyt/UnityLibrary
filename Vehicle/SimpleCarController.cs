@@ -14,6 +14,18 @@ public class SimpleCarController : MonoBehaviour
     [Tooltip("Maximum steer angle the wheel can have")]
     private float maxSteeringAngle;
 
+    public float MaxMotorTorque
+    {
+        get { return maxMotorTorque; }
+        set { maxMotorTorque = value; }
+    }
+
+    public float MaxSteeringAngle
+    {
+        get { return maxSteeringAngle; }
+        set { maxSteeringAngle = value; }
+    }
+
     private void FixedUpdate()
     {
         // Applying controls to the motion
